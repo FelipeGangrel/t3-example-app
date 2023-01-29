@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { Button } from "@ui/Button"
 
 import { api } from "../utils/api";
 
@@ -49,6 +50,17 @@ const Home: NextPage = () => {
               {hello.data ? hello.data.greeting : "Loading tRPC query..."}
             </p>
             <AuthShowcase />
+          </div>
+          <div className="flex flex-col gap-4 items-center">
+            <Button size="sm">sm button</Button>
+            <Button size="md">md button</Button>
+            <Button size="lg">lg button</Button>
+            <Button size="sm" intent="secondary">sm button</Button>
+            <Button size="md" intent="secondary">md button</Button>
+            <Button size="lg" intent="secondary">lg button</Button>
+            <Button size="sm" intent="danger">sm button</Button>
+            <Button size="md" intent="danger">md button</Button>
+            <Button size="lg" intent="danger">lg button</Button>
           </div>
         </div>
       </main>
